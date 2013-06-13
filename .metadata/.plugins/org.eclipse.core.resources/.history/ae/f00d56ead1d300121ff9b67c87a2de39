@@ -11,9 +11,11 @@ public class PrincipalCod {
 		System.out.println("Decode actual: "+decode);
 		if(ab.isLeaf() && ab.getData().equals(car)) {
 	    	System.out.println("¡¡¡¡found!!!! decode correcto: "+decode);
+	    	aux = decode;
 	    	return decode;
 	    }else{
-	    	String aux = decode;
+	    	String aux;
+	    	String auxright;
 	    	if(ab.getLeftSubTree() != null) {
 				System.out.println("entro en nodo hijo izq");
 		        aux = visitNode(ab.getLeftSubTree(), car, decode+"0");
@@ -22,7 +24,7 @@ public class PrincipalCod {
 				System.out.println("entro en nodo hijo der");
 		        aux = visitNode(ab.getRightSubTree(), car, decode+"1");
 		    }
-		    return aux;
+		    return decode;
 	    }
 	}
 	

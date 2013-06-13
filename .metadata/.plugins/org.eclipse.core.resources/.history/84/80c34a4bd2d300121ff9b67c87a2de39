@@ -13,16 +13,19 @@ public class PrincipalCod {
 	    	System.out.println("¡¡¡¡found!!!! decode correcto: "+decode);
 	    	return decode;
 	    }else{
-	    	String aux = decode;
-	    	if(ab.getLeftSubTree() != null) {
-				System.out.println("entro en nodo hijo izq");
-		        aux = visitNode(ab.getLeftSubTree(), car, decode+"0");
-		    }
-		    if(ab.getRightSubTree() != null) {
-				System.out.println("entro en nodo hijo der");
-		        aux = visitNode(ab.getRightSubTree(), car, decode+"1");
-		    }
-		    return aux;
+	    	if(ab.root == null){
+	    		String aux = decode;
+		    	if(ab.getLeftSubTree() != null) {
+					System.out.println("entro en nodo hijo izq");
+			        aux = visitNode(ab.getLeftSubTree(), car, decode+"0");
+			    }
+			    if(ab.getRightSubTree() != null) {
+					System.out.println("entro en nodo hijo der");
+			        aux = visitNode(ab.getRightSubTree(), car, decode+"1");
+			    }
+	    	}else{
+	    		return decode;
+	    	}
 	    }
 	}
 	

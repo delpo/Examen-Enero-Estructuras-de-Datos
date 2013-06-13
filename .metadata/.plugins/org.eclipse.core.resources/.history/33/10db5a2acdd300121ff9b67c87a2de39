@@ -6,23 +6,23 @@ public class PrincipalCod {
 	 * @param args
 	 */
 	
-	public static String visitNode(EDBinaryTree<Character> ab, char car, String decode) {
+	public static String visitNode(EDBinaryTree<Character> ab, char car, String decode, boolean found) {
 		System.out.println("Valor: "+ab.getData());
 		System.out.println("Decode actual: "+decode);
-		if(ab.isLeaf() && ab.getData().equals(car)) {
+		if(ab.isLeaf() && ab.getData().equals(car) && !found) {
 	    	System.out.println("¡¡¡¡found!!!! decode correcto: "+decode);
+	    	found = true;
 	    	return decode;
 	    }else{
-	    	String aux = decode;
-	    	if(ab.getLeftSubTree() != null) {
+	    	if(ab.getLeftSubTree() != null && !found) {
 				System.out.println("entro en nodo hijo izq");
-		        aux = visitNode(ab.getLeftSubTree(), car, decode+"0");
+		        visitNode(ab.getLeftSubTree(), car, decode+"0");
 		    }
-		    if(ab.getRightSubTree() != null) {
+		    if(ab.getRightSubTree() != null && !found) {
 				System.out.println("entro en nodo hijo der");
-		        aux = visitNode(ab.getRightSubTree(), car, decode+"1");
+		        visitNode(ab.getRightSubTree(), car, decode+"1");
 		    }
-		    return aux;
+		    return decode;
 	    }
 	}
 	

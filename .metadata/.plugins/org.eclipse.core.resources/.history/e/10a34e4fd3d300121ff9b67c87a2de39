@@ -14,15 +14,17 @@ public class PrincipalCod {
 	    	return decode;
 	    }else{
 	    	String aux = decode;
-	    	if(ab.getLeftSubTree() != null) {
+	    	//if(ab.getLeftSubTree() != null) {
 				System.out.println("entro en nodo hijo izq");
-		        aux = visitNode(ab.getLeftSubTree(), car, decode+"0");
-		    }
-		    if(ab.getRightSubTree() != null) {
+				decode = "0".concat(decode);
+		        aux = visitNode(ab.getLeftSubTree(), car, decode);
+		    //}
+		    //if(ab.getRightSubTree() != null) {
 				System.out.println("entro en nodo hijo der");
-		        aux = visitNode(ab.getRightSubTree(), car, decode+"1");
-		    }
-		    return aux;
+				decode = "1".concat(decode);
+		        aux = visitNode(ab.getRightSubTree(), car, decode);
+		    //}
+		    return decode;
 	    }
 	}
 	

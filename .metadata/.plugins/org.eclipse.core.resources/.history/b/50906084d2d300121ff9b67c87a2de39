@@ -22,6 +22,7 @@ public class PrincipalCod {
 				System.out.println("entro en nodo hijo der");
 		        aux = visitNode(ab.getRightSubTree(), car, decode+"1");
 		    }
+		    if(aux == null) return decode;
 		    return aux;
 	    }
 	}

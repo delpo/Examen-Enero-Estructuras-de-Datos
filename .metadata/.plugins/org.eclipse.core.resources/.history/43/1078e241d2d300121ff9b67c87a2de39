@@ -13,6 +13,9 @@ public class PrincipalCod {
 	    	System.out.println("¡¡¡¡found!!!! decode correcto: "+decode);
 	    	return decode;
 	    }else{
+	    	if(ab.root == null){
+	    		
+	    	}
 	    	String aux = decode;
 	    	if(ab.getLeftSubTree() != null) {
 				System.out.println("entro en nodo hijo izq");

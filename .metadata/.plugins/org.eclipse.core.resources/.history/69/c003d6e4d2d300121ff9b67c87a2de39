@@ -16,10 +16,12 @@ public class PrincipalCod {
 	    	String aux = decode;
 	    	if(ab.getLeftSubTree() != null) {
 				System.out.println("entro en nodo hijo izq");
+				decode = decode.concat("0");
 		        aux = visitNode(ab.getLeftSubTree(), car, decode+"0");
 		    }
 		    if(ab.getRightSubTree() != null) {
 				System.out.println("entro en nodo hijo der");
+				decode = decode.concat("1");
 		        aux = visitNode(ab.getRightSubTree(), car, decode+"1");
 		    }
 		    return aux;
