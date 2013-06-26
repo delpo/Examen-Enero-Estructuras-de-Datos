@@ -1,0 +1,8 @@
+package ej4jun12;
+
+import java.util.ArrayList;
+
+public class ArbolGeneral<T> {
+	public T raiz ;
+	public ArrayList < ArbolGeneral <T > > hijos ;
+}

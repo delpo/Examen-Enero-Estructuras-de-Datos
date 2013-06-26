@@ -1,0 +1,12 @@
+package ej3jun12;
+
+public class ProbadorMonticulo {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		Monticulo mont = new Monticulo<H>();
+	}
+
+}

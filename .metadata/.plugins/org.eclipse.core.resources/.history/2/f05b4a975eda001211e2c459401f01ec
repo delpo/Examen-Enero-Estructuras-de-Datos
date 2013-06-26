@@ -1,0 +1,5 @@
+package ej4jun12;
+
+public class ProbadorGradoMax {
+	ArbolGeneral<Integer> arbol = new ArbolGeneral<Integer>(27, hijos)
+}

@@ -1,0 +1,33 @@
+package ej3jun12;
+
+import java.util.Vector;
+
+public class Monticulo {
+	
+	private String[] vector;
+	
+	public Monticulo(){
+		vector =  new String[100];
+	}
+	
+	public Monticulo(String root){
+		vector[0] = root;
+	}
+	
+	public void anyadir(String elemento){
+		anyadir(0, elemento);
+	}
+
+	private void anyadir(int index, String elemento) {
+		if(index > ){
+			vector.add(0, elemento);
+		}else if(vector.get(index).compareTo(elemento) == 0){
+			//ya est‡ el elemento, supongo que no pueden haber repetidos
+		}else if(vector.get(index).isEmpty()){
+			vector.add(index, elemento);
+		}else if(vector.get(index).compareTo(elemento) < 0){
+			anyadir(2*index+1, elemento); //hijo izquierdo
+			anyadir(2*index+2, elemento); //hijo derecho
+		}
+	}
+}

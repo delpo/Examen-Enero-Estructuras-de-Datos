@@ -1,0 +1,14 @@
+package ej4jun12;
+
+import java.util.LinkedList;
+
+public class ArbolGeneral<T> {
+	public T raiz ;
+	public LinkedList < ArbolGeneral <T > > hijos ;
+	
+	public ArbolGeneral(T raiz,  ArrayList < ArbolGeneral <T > > hijos){
+		this.raiz = raiz;
+		this.hijos = hijos;
+	}
+	
+}

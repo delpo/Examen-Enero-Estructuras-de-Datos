@@ -1,0 +1,13 @@
+package ej4jun12;
+
+import java.util.ArrayList;
+
+public class ArbolGeneral<T> {
+	public T raiz ;
+	public ArrayList < ArbolGeneral <T > > hijos ;
+	
+	public ArbolGeneral<T>(T raiz1,  ArrayList < ArbolGeneral <T > > hijos){
+		this.raiz = raiz;
+		this.hijos = hijos;
+	}
+}

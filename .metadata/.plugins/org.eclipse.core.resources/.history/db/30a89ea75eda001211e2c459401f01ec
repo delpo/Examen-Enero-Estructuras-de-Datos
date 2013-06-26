@@ -1,0 +1,8 @@
+package ej4jun12;
+
+import java.util.ArrayList;
+
+public class ProbadorGradoMax {
+	ArrayList<ArbolGenera<Integer>> hijos = new ArrayList<E>();
+	ArbolGeneral<Integer> arbol = new ArbolGeneral<Integer>(27, hijos);
+}

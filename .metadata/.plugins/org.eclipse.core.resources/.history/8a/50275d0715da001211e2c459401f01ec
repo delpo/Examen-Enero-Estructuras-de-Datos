@@ -1,0 +1,13 @@
+package ej3jun12;
+
+public class ProbadorMonticulo {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		Monticulo<String> mont = new Monticulo<String>();
+		mont.anyadir("1");
+	}
+
+}

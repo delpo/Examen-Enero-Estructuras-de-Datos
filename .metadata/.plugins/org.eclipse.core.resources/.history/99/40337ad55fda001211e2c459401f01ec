@@ -1,0 +1,16 @@
+package ej4jun12;
+
+import java.util.LinkedList;
+
+public class ProbadorGradoMax {
+
+	ArbolGeneral<Integer> misubarbol = new ArbolGeneral<Integer>(12, hijos);
+	ArbolGeneral<Integer> misubarbol2 = new ArbolGeneral<Integer>(12, hijos2);
+	
+	LinkedList<ArbolGeneral<Integer>> hijos = new LinkedList<ArbolGeneral<Integer>>();
+	LinkedList<ArbolGeneral<Integer>> hijos2 = new LinkedList<ArbolGeneral<Integer>>();
+	
+	ArbolGeneral<Integer> arbol = new ArbolGeneral<Integer>(27, hijos);
+	
+	
+}

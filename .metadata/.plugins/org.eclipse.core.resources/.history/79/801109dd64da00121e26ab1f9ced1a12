@@ -1,0 +1,47 @@
+package ej4jun12;
+
+import java.util.LinkedList;
+
+public class ArbolGeneral<T> {
+	private T raiz ;
+	private LinkedList < ArbolGeneral <T > > hijos ;
+
+	public ArbolGeneral(){
+		
+	}
+	
+	public ArbolGeneral(T raiz,  LinkedList < ArbolGeneral <T > > hijos){
+		this.setRaiz(raiz);
+		this.setHijos(hijos);
+	}
+
+	public T getRaiz() {
+		return raiz;
+	}
+
+	public void setRaiz(T raiz) {
+		this.raiz = raiz;
+	}
+
+	public LinkedList < ArbolGeneral <T > > getHijos() {
+		return hijos;
+	}
+
+	public void setHijos(LinkedList < ArbolGeneral <T > > hijos) {
+		this.hijos = hijos;
+	}
+
+	public int getGradoMax() {
+		int gradomax = 0;
+		
+		Iterator ir = new hijos.listIterator;
+		
+		for(ArbolGeneral<T> t : hijos){
+			int candidato = t.getGradoMax();
+			if(candidato > gradomax) gradomax = candidato;
+		}
+		gradomax++;
+		return gradomax;
+	}
+		
+}
